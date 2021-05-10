@@ -53,13 +53,10 @@ export const solve = (
       return a + " " + (a + k);
     }
     if (sortedXSYS[i].second > sortedXTYT[j].second) {
-      console.log("if1")
       j++;
     } else if (sortedXSYS[i].second < sortedXTYT[j].second) {
-      console.log("if2")
       i++;
     } else {
-      console.log("if3")
       i++;
       j++;
     }
