@@ -1,15 +1,18 @@
 {
   "$schema": "./node_modules/@stryker-mutator/core/schema/stryker-schema.json",
   "packageManager": "npm",
-  "reporters": [
-    "html",
-    "clear-text",
-    "progress"
-  ],
+  "reporters": ["html", "clear-text", "progress"],
   "testRunner": "jest",
-  "coverageAnalysis": "perTest",
+  "coverageAnalysis": "off",
   "tempDirName": "stryker-tmp",
   "jest": {
     "enableFindRelatedTests": false
-  }
+  },
+  "mutate": [
+    "src/solution.ts",
+    "!src/App.tsx",
+    "!src/index.tsx",
+    "!src/reportWebVitals.js",
+    "!src/utils.ts"
+  ]
 }

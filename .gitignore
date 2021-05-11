@@ -5,6 +5,7 @@
 /.pnp
 .pnp.js
 /stryker-tmp
+/reports
 
 # testing
 /coverage

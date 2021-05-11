@@ -1,9 +1,4 @@
-type Interval = {
-  first: number;
-  second: number;
-};
-
-const defaultInterval = [{ first: 1, second: 2 }, { first: 3, second: 4 }]
+import { defaultInterval, Interval, sort } from "./utils";
 
 export const solve = (
   k: number,
@@ -62,10 +57,4 @@ export const solve = (
     }
   }
   return -1;
-};
-
-const sort = (intervals: Interval[]) => {
-  return intervals.sort((a: Interval, b: Interval) =>
-    a.first <= b.first ? -1 : 1
-  );
 };

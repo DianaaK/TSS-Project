@@ -390,3 +390,19 @@ test("Circuit 3", () => {
     solve(4, 2, [{ first: 11, second: 16 }, { first: 25, second: 31 }], 2, [{ first: 14, second: 16 }, { first: 23, second: 29 }])
   ).toBe("25 29");
 });
+
+
+// --------------------------- // ---------------------------
+//  Teste suplimentare pentru omorarea mutantilor
+
+test("ConditionalExpression test", () => {
+  expect(
+    solve(4, 2, [{ first: 11, second: 16 }, { first: 25, second: 31 }], 2, [{ first: 14, second: -1 }, { first: 23, second: 29 }])
+  ).toBe("Input invalid");
+});
+
+test("EqualityOperator test", () => {
+  expect(
+    solve(4, 2, [{ first: 1, second: 10 }, { first: 13, second: 15}], 1, [{ first: Math.pow(10,9), second: Math.pow(10,8)}])
+  ).toBe(-1);
+});
